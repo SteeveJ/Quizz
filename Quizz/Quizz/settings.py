@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 )
-
+    
 ROOT_URLCONF = 'Quizz.urls'
 
 TEMPLATES = [
@@ -78,12 +78,13 @@ WSGI_APPLICATION = 'Quizz.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'quizz',
-        'USER': 'quizz',
-        'PASSWORD': 'quizz',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'quizz',                      # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': 'steeve',
+        'PASSWORD': 'monopoly',
+        'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+        'PORT': '',                      # Set to empty string for default.
     }
 }
 
